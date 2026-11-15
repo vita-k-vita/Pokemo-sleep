@@ -20,14 +20,93 @@
 
 .field-explorer-controls{grid-template-columns:2fr 1fr}.field-pokemon-filters{grid-template-columns:2fr 1fr}.field-matrix{table-layout:fixed;min-width:970px}.field-matrix th:first-child{width:120px}.field-matrix th:nth-child(2){width:125px}.field-matrix th:nth-child(3){width:105px}.field-matrix td{vertical-align:top;white-space:normal}.field-matrix .num{white-space:nowrap}.field-pokemon-grid{display:flex;flex-wrap:wrap;gap:12px 6px}.field-pokemon-tile{width:78px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;font-size:10px;line-height:1.5;overflow-wrap:anywhere}.field-pokemon-tile img{object-fit:contain}.field-matrix-wrap{max-height:900px}.field-matrix tbody th{vertical-align:top}@media(max-width:700px){.field-explorer-controls{grid-template-columns:1fr}.field-pokemon-filters{grid-template-columns:1fr}.field-matrix{min-width:900px}}
 
+main > [role="tablist"] { margin: 0 0 18px; }
+.field-mobile-meta { display: none; }
+
+@media (max-width: 760px) {
+  header { padding: 8px 12px; }
+  header .tag { display: none; }
+  .brand span { width: 27px; height: 27px; margin-right: 7px; }
+  main { padding: 10px 10px 24px; }
+  main > [role="tablist"] {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+  main > [role="tablist"] button { padding: 5px 4px; min-height: 40px; font-size: 12px; }
+  .layout, .results { gap: 10px; }
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .results { grid-template-columns: minmax(0, 1fr); }
+  .config, .selection, .compare-panel, #candyPanel > .panel { padding: 12px; }
+  .config .field { margin-bottom: 8px; }
+  .config .divider { margin: 10px 0; }
+  .config .section-title { margin-bottom: 8px; }
+  .sub-field { margin: 5px 0; }
+  #pokemonPortrait { width: 74px !important; height: 74px !important; }
+  .selection h2 { font-size: 16px; }
+  .rank-overview, .rank-track, .selected-chips { margin-top: 10px; }
+  .cards { gap: 6px; }
+  .stat { padding: 8px 10px; }
+  .stat .value { margin: 2px 0; }
+  .ingredients { padding: 8px 10px; gap: 8px; }
+  .ranking-header { padding: 10px; }
+  .ranking-header .tabs { margin-top: 8px; gap: 4px; }
+  .ranking-header .tab { padding: 5px 8px; }
+  #candyPanel .settings-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 10px 0; }
+  #candyPanel .settings-grid > :first-child { grid-column: 1 / -1; }
+  .recipe-heading, .field-explorer-heading { margin: 0 0 9px; }
+  .recipe-heading h2, .field-explorer-heading h2, #candyPanel h2 { font-size: 19px; margin: 3px 0; }
+  .recipe-heading > .pill, .recipe-heading .eyebrow, .field-explorer-heading .eyebrow { display: none; }
+  .recipe-layout { gap: 8px; }
+  .recipe-summary, .recipe-filters, .field-section, .field-explorer-controls { padding: 10px; }
+  .recipe-summary-stats { padding: 6px 10px; margin: 6px 0; }
+  .recipe-summary-stats b { font-size: 22px; }
+  #recipeTotals { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 8px; }
+  .recipe-total-row { gap: 4px; min-width: 0; padding: 4px 0; font-size: 10px; overflow-wrap: anywhere; }
+  .recipe-total-row img { width: 22px; height: 22px; }
+  .recipe-total-row b { font-size: 14px; }
+  .recipe-plan-details { margin-top: 6px; }
+  .recipe-plan-row { padding: 4px 0; }
+  .recipe-filters, .field-explorer-controls, .field-pokemon-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 8px;
+  }
+  .recipe-filters { margin-bottom: 8px; }
+  .field-explorer-controls > div:first-child, .field-pokemon-filters > div:first-child { grid-column: auto; }
+  .recipe-card { gap: 6px; padding: 8px; }
+  .recipe-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+  .recipe-card-top { display: block; }
+  .dish-picture { width: 52px; height: 52px; }
+  .recipe-card h3 { font-size: 12px; }
+  .recipe-count { gap: 4px; padding-top: 4px; }
+  .recipe-count select { width: auto; min-width: 0; padding: 4px; font-size: 11px; }
+  .recipe-check { gap: 3px; }
+  .recipe-count .recipe-check { white-space: nowrap; }
+  .field-section { margin-top: 8px; }
+  .field-section h3 { margin-bottom: 4px; font-size: 15px; }
+  .field-section-heading { gap: 4px; }
+  .field-section .table-wrap { margin: 8px -10px -10px; }
+  .field-section td, .field-section th { padding: 6px 3px; }
+  .field-pokemon-filters { margin: 8px 0 4px; }
+  .field-matrix { min-width: 0; }
+  .field-matrix th:first-child { width: 26%; }
+  .field-matrix tr > :nth-child(2), .field-matrix tr > :nth-child(3) { display: none; }
+  .field-matrix thead th { text-align: center; }
+  .field-mobile-meta { display: grid; font-size: 10px; margin-top: 3px; font-variant-numeric: tabular-nums; }
+  .field-rank-badge { padding: 2px 3px; font-size: 10px; }
+  .field-pokemon-grid { gap: 4px; justify-content: center; }
+  .field-pokemon-tile { width: 100%; max-width: 65px; gap: 1px; font-size: 10px; }
+  .field-pokemon-tile img { width: 29px; height: 29px; }
+}
+
 </style>
 </head>
 <body>
 <header><div class="brand"><span>☾</span>ねむりのラボ</div><div class="tag">POKÉMON SLEEP · ALL FINAL FORMS</div></header>
 <noscript>このツールを使うには、ブラウザのJavaScriptを有効にしてください。</noscript>
 <main>
-<div class="intro"><div><div class="eyebrow">DAILY EXPECTATION EXPLORER</div><h1>その子の可能性を、数字で。</h1><p class="muted">食材・スキル・きのみ。得意分野から、育てたい組み合わせを見つけよう。</p></div><div class="conditions"><span class="pill">◷ 24時間換算</span><span class="pill">♡ げんき80固定</span><span class="pill">↗ サブスキル3枠まで</span></div></div>
-<div class="tabs" role="tablist" aria-label="機能切り替え" style="margin-bottom:22px"><button id="expectationTab" role="tab" aria-selected="true" aria-controls="expectationPanel">期待値ランキング</button><button id="candyTab" role="tab" aria-selected="false" aria-controls="candyPanel" tabindex="-1">必要アメ計算</button><button id="recipeTab" role="tab" aria-selected="false" aria-controls="recipePanel" tabindex="-1">レシピ食材計算</button><button id="fieldTab" role="tab" aria-selected="false" aria-controls="fieldPanel" tabindex="-1">フィールド別出現一覧</button></div><section id="expectationPanel" role="tabpanel" aria-labelledby="expectationTab"><div class="layout">
+<div class="tabs" role="tablist" aria-label="機能切り替え"><button id="expectationTab" role="tab" aria-selected="true" aria-controls="expectationPanel">期待値ランキング</button><button id="candyTab" role="tab" aria-selected="false" aria-controls="candyPanel" tabindex="-1">必要アメ計算</button><button id="recipeTab" role="tab" aria-selected="false" aria-controls="recipePanel" tabindex="-1">レシピ食材計算</button><button id="fieldTab" role="tab" aria-selected="false" aria-controls="fieldPanel" tabindex="-1">フィールド別出現一覧</button></div><section id="expectationPanel" role="tabpanel" aria-labelledby="expectationTab"><div class="layout">
 <aside class="panel config"><details class="upload-box" id="uploadPanel"><summary>▧ 画像から個体を入力</summary><section aria-label="画像から個体を入力" style="padding-top:12px"><label for="imageFile">おてつだい能力画面のスクリーンショット</label><input id="imageFile" type="file" accept="image/png,image/jpeg,image/webp"><p class="help">画像を選ぶと読取結果を自動反映します。画像は外部に送信しません。OCRエンジン取得時のみ通信が必要です。</p><p id="importStatus" class="help" role="status">対応：収録ポケモン全種（日本語の能力画面）</p><img id="imagePreview" hidden alt="読み取り対象のスクリーンショット" style="width:100%;max-height:180px;object-fit:contain;margin-top:10px"><div id="evolutionPicker" hidden><label for="evolutionTarget">分岐進化の計算先</label><select id="evolutionTarget"></select><button id="applyEvolution" type="button" class="button">この進化先で反映</button></div><ul id="importReport" class="import-report"></ul><details style="padding:8px 0"><summary>読み取った文字を見る</summary><textarea id="ocrText" readonly aria-label="OCRの読取文字" style="width:100%;height:140px;font-size:11px;margin-top:8px"></textarea></details><p class="help">文字の誤認識があります。未読取項目は結果に明記します。食材は個数から一意に特定できる場合のみ反映。比較レベル25・30・60は維持します。</p></section></details><hr class="divider">
 <div class="section-title"><h2><span class="step">01</span>比較する条件</h2><span class="tag">LOCAL</span></div>
 <div class="field"><label for="pokemonSearch">ポケモン名で検索</label><input type="search" id="pokemonSearch" placeholder="例：じば、リザ、ﾋﾟｶ" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="pokemonSuggestions" autocomplete="off"><div id="pokemonSuggestions" role="listbox" aria-label="ポケモン検索候補" hidden></div><p id="catalogCount" class="help"></p></div><div class="field"><label for="pokemon">ポケモン</label><select id="pokemon"></select><p id="specialtyHint" class="specialty-hint"></p><p id="dataQuality" class="error" hidden></p><div class="help">進化先のない種族・無進化・限定フォームを収録。</div></div>
@@ -43,7 +122,7 @@
 <div class="help">同名・同ランクの重複は不可。「なし」は補正なしの比較用です。</div><p id="error" class="error" role="alert"></p>
 <button id="reset" class="button">条件を初期値に戻す</button>
 </aside>
-<div class="results"><section class="panel compare-panel" aria-labelledby="compareTitle"><div class="ranking-headline"><h2 id="compareTitle">2個体を比較</h2><button id="clearCompare" class="button" type="button">比較をクリア</button></div><p class="help">左の入力欄やランキングから個体を選び、A・Bに登録してください。条件ごと保存し、好物一致は個別に変更できます。</p><div class="compare-slots"><div><button id="saveCompareA" class="button" type="button">今の個体をAに登録</button><div id="compareA"></div></div><div><button id="saveCompareB" class="button" type="button">今の個体をBに登録</button><div id="compareB"></div></div></div><p id="compareNotice" class="help"></p><div class="table-wrap"><table aria-label="2個体の期待値比較"><thead><tr><th>比較項目（1日あたり）</th><th>A</th><th>B</th><th>差 A − B</th></tr></thead><tbody id="compareRows"></tbody></table></div><p class="help">食材別の行は通常収集のみ。スキル由来食材は別行の合計で表示します。エナジーは現在のツールと同じ基礎換算です。</p></section>
+<div class="results">
 <section class="panel selection" aria-label="選択した個体の評価" aria-live="polite">
 <img id="pokemonPortrait" alt="" style="float:right;width:110px;height:110px;object-fit:contain;margin:0 0 10px 15px;background:#ffffff12;border-radius:16px"><div class="selection-head"><div><div class="eyebrow">YOUR SELECTED BUILD</div><h2 id="selectedName"></h2></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:7px"><span class="chip" id="selectedSpecialty" style="background:#e4ce95;color:#203b40;font-weight:700"></span><span class="chip" id="selectedMetric"></span></div></div><div class="selected-chips" id="selectedChips"></div>
 <div class="rank-overview"><div><span class="big-rank" id="rank">—</span> <small id="population"></small></div><div><small>上位 </small><strong id="percentile">—</strong></div><div><small>偏差値 </small><strong id="deviation">—</strong></div></div>
@@ -60,7 +139,9 @@
 <details><summary>計算式とランキングの範囲</summary><p>総エナジー＝きのみ数×ROUND(MAX(基礎きのみ値＋Lv−1, 基礎きのみ値×1.025^(Lv−1)))×好物倍率＋食材基礎エナジー×換算倍率＋直接エナジースキル。全体にフィールド補正を適用。ランダム食材は全19食材の基礎値平均を使用します。料理レシピ・料理Lv.・大成功は自動計算しません。追加きのみ・追加おてつだい・回復・コピーなどの未計算効果は含みません。きのみとくいの順位はこの換算総量を使用します。</p><a href="https://wikiwiki.jp/poke_sleep/検証/きのみエナジーの計算式" target="_blank" rel="noopener">きのみエナジーの検証</a><p>4時間または6時間ごとに食材・きのみを全回収し、スキルも発動するモデルです。所持数の確率分布を追跡し、満杯になる直前のおてつだいは一括取得、その後はきのみのみ（いつのまに育成分を含む）とします。スキルは満杯まで抽選、スキル・オールとくいは2回、他は1回まで蓄積。回収間の端数おてつだいは隣接する整数回数を補間します。スキル由来食材は回収時に直ちに収納する想定です。夜間も同じ回収間隔で、睡眠中の回収不能時間は別途モデル化していません。下記の単純式は所持上限を適用する前の基準値です。</p><div class="content"><p>同一ポケモン・レベル・食材構成・基礎スキルLv.で比較します。種族を切り替えると、食材とくい→通常食材、スキルとくい→スキル発動、きのみとくい→総エナジー、オールとくい→スキル発動を優先します。性格25種 × サブスキル17種から解放枠数だけ選ぶ全組み合わせ。解放済み枠の順序は同一視します。Lv.25/30では2枠、Lv.60では3枠を計算し、Lv.75/100は扱いません。食材はLv.25で1枠、Lv.30で2枠、Lv.60で3枠を解放します。Lv.60でもサブスキルはLv.50までの3枠です。</p><p>全構成を等しい重みで評価します。実際に仲間になる確率、金枠確定条件、将来の育成価値は反映しません。「なし」は比較用で母集団に含みません。順位は自分より期待値が高い構成数＋1（同値は同順位）。上位割合＝順位÷母集団数。偏差値＝50＋10×（期待値−母平均）÷母標準偏差。分散0の場合は50です。</p><div class="formula">時間 T = floor(基準秒 × 性格時間倍率 × (1 − (Lv.−1) × 0.002) × (1 − スピード補正合計))<br>おてつだい回数 H = 86400 ÷ (T × 0.52)<br>食材確率 P = 基礎食材確率 × 性格倍率 × (1 ＋ 食材サブスキル補正合計)<br>各食材 = H × P × 各解放枠の個数 ÷ 解放食材枠数<br>きのみ数 = H × (1 − P) × (きのみとくいなら2、それ以外1 ＋ きのみの数Sなら1)<br>スキル回数 = H × 基礎スキル確率 × 性格倍率 × (1 ＋ スキルサブスキル補正合計)<br>ランダム食材 = スキル回数 × 有効スキルLv.の獲得数<br>食材合計 = 通常収集 ＋ ランダム食材（食材ゲットSのみ）<br>鍋拡張期待値 = スキル回数 × 有効スキルLv.の拡張枠数（料理パワーアップSのみ）</div><p>食材枠は等確率。食材確率S/Mは＋18%/36%、スキル確率S/Mは＋18%/36%、おてスピS/Mは時間−7%/14%、おてつだいボーナスは本人に−5%を加算（時間短縮は最大35%）。他のチームメンバーからの補正は0です。</p><p>げんきは80ちょうどで固定し、時間倍率0.52を使用します（80超の0.45とは異なります）。スピード上昇性格は時間×0.9、下降性格は更新後の×1.075。食材・スキルの性格補正は×1.2/0.8です。</p><p>24時間こまめに回収する理想化モデルです。クールタイム・不発天井、キャンプ・イベント・リボンを省略しています。実際の獲得数や参考チェッカーの結果と一致するものではありません。きのみの数Sは通常きのみ数のみに反映します。所持数アップS/M/Lは上限に＋6/12/18個を加算します。EXP・げんき回復はげんき固定のため反映しません。きのみ数は通常収集のみで、きのみバースト等の追加効果は含みません。</p><p>バリヤードのものまねはコピー先のチーム構成に依存するため、発動回数のみ計算し、追加効果は未計算です（食材合計は通常収集のみ）。ジバコイルの鍋拡張は延べ枠数です。料理による消費・蓄積上限200枠は計算せず、収集食材には加算しません。ランダム食材は入手済み食材の範囲が未設定のため、種類ごとの配分を出していません。上の各食材数と食材別ランキングは通常収集のみです。</p></div></details>
 <details><summary>基礎データを確認・調整する</summary><div class="content"><p>非公式の推定値をローカルに収録。計算でAPI通信は行いません。画像読み取りはTesseract.jsのライブラリ・日本語データをダウンロードしてブラウザ内で処理します。入力すると全構成を再計算します。ポケモンを切り替えると、その種族の初期データと食材候補に切り替わります。</p><div class="settings-grid"><div><label for="baseTime">Lv.1 基準おてつだい秒数</label><input id="baseTime" type="number" min="1" max="100000" step="1" value="2400" required></div><div><label for="baseIng">基礎食材確率（%）</label><input id="baseIng" type="number" min="0" max="54" step="0.01" value="22.4" required></div><div><label for="baseSkill">基礎スキル確率（%）</label><input id="baseSkill" type="number" min="0" max="54" step="0.01" value="1.6" required></div></div><p>確率の入力上限は54%（最大補正時も100%以内）。調整値もCSVに記録されます。</p></div></details>
 <details><summary>収録データ・参考資料について</summary><div class="content"><p id="datasetSummary"></p><p>最終進化の判定は公開元の remainingEvolutions=0 に基づきます。ミュウ・ミュウツーは公開元に暫定・試験値を含むため、通常の確定データと区別して表示します。食材・きのみの通常収集とスキル発動回数は全収録種に対応。チーム依存、ランダムな発動先、大成功等の追加効果は、明記した基本分を除いて未計算です。</p><p>添付画像の厳選表を比較操作の参考にしています。動画はタイトル・添付の場面を参照し、字幕や全編の内容は未確認です。データ確認日：2026年11月4日。基礎確率は非公式の推定値です。</p><div class="source-links"><a href="https://github.com/nerolis-lab/nerolis-lab" target="_blank" rel="noopener">種族・食材データ：Neroli’s Lab ↗</a><a href="https://github.com/PokeAPI/pokeapi" target="_blank" rel="noopener">日本語名：PokéAPI ↗</a><a href="https://www.pokemonsleepdaifuku.com/checker/expected/" target="_blank" rel="noopener">期待値チェッカー ↗</a><a href="https://www.youtube.com/watch?v=HrMmmGiP7Xc" target="_blank" rel="noopener">参考動画 ↗</a><a href="https://wikiwiki.jp/poke_sleep/リザードン" target="_blank" rel="noopener">リザードンのデータ ↗</a><a href="https://github.com/naptha/tesseract.js" target="_blank" rel="noopener">画像読取：Tesseract.js ↗</a><a href="https://wikiwiki.jp/poke_sleep/バリヤード" target="_blank" rel="noopener">バリヤードのデータ ↗</a><a href="https://wikiwiki.jp/poke_sleep/ジバコイル" target="_blank" rel="noopener">ジバコイルのデータ ↗</a><a href="https://wikiwiki.jp/poke_sleep/メインスキル/料理パワーアップ" target="_blank" rel="noopener">料理パワーアップS ↗</a><a href="https://wikiwiki.jp/poke_sleep/おてつだい/おてつだい時間" target="_blank" rel="noopener">時間の検証 ↗</a><a href="https://wikiwiki.jp/poke_sleep/検証/おてつだいの仕様" target="_blank" rel="noopener">げんき・回収の検証 ↗</a><a href="https://wikiwiki.jp/poke_sleep/せいかく" target="_blank" rel="noopener">性格補正 ↗</a><a href="https://wikiwiki.jp/poke_sleep/サブスキル" target="_blank" rel="noopener">サブスキル ↗</a><a href="https://wikiwiki.jp/poke_sleep/メインスキル/食材ゲット" target="_blank" rel="noopener">食材ゲットS ↗</a></div></div></details>
-<details><summary>データとアイコンの出典・ライセンス</summary><div class="content"><p>種族定義・食材アイコン：Neroli’s Lab。日本語の種族名：PokéAPI。ゲームの画像・キャラクターの権利は各権利者に帰属します。公開元のライセンスとNOTICEを以下に収録しています。</p><pre id="licenseText" style="white-space:pre-wrap;max-height:300px;overflow:auto;font-size:10px"></pre></div></details></section></div></div><footer>ねむりのラボ · 非公式ファンツール / 計算はオフライン対応・画像読取はOCR取得時に通信 · 設定はこのブラウザに保存されます</footer>
+<details><summary>データとアイコンの出典・ライセンス</summary><div class="content"><p>種族定義・食材アイコン：Neroli’s Lab。日本語の種族名：PokéAPI。ゲームの画像・キャラクターの権利は各権利者に帰属します。公開元のライセンスとNOTICEを以下に収録しています。</p><pre id="licenseText" style="white-space:pre-wrap;max-height:300px;overflow:auto;font-size:10px"></pre></div></details></section>
+<section class="panel compare-panel" aria-labelledby="compareTitle"><div class="ranking-headline"><h2 id="compareTitle">2個体を比較</h2><button id="clearCompare" class="button" type="button">比較をクリア</button></div><p class="help">入力欄やランキングから個体を選び、A・Bに登録してください。条件ごと保存し、好物一致は個別に変更できます。</p><div class="compare-slots"><div><button id="saveCompareA" class="button" type="button">今の個体をAに登録</button><div id="compareA"></div></div><div><button id="saveCompareB" class="button" type="button">今の個体をBに登録</button><div id="compareB"></div></div></div><p id="compareNotice" class="help"></p><div class="table-wrap"><table aria-label="2個体の期待値比較"><thead><tr><th>比較項目（1日あたり）</th><th>A</th><th>B</th><th>差 A − B</th></tr></thead><tbody id="compareRows"></tbody></table></div><p class="help">食材別の行は通常収集のみ。スキル由来食材は別行の合計で表示します。エナジーは現在のツールと同じ基礎換算です。</p></section>
+</div></div><footer>ねむりのラボ · 非公式ファンツール / 計算はオフライン対応・画像読取はOCR取得時に通信 · 設定はこのブラウザに保存されます</footer>
 </section><section id="candyPanel" role="tabpanel" aria-labelledby="candyTab" hidden>
 <div class="panel"><div class="eyebrow">CANDY PLANNER</div><h2>必要アメ計算</h2><p>進化前も含めて選択し、目標レベルまでの育成コストを確認できます。</p>
 <div class="settings-grid"><div><label for="candySearch">ポケモンを検索</label><input id="candySearch" type="search" placeholder="例：りざ、ﾐﾆﾘｭｳ" autocomplete="off"><p class="help" id="candySearchNote"></p><label for="candyPokemon">ポケモン</label><select id="candyPokemon"></select></div><div><label for="candyType">経験値タイプ（自動選択・変更可）</label><select id="candyType"><option value="1">600タイプ（通常）</option><option value="1.5">900タイプ（1.5倍）</option><option value="1.8">1080タイプ（1.8倍）</option><option value="2.2">1320タイプ（2.2倍）</option></select></div><div><label for="candyNature">性格のEXP補正</label><select id="candyNature"><option value="normal">補正なし</option><option value="up">EXP獲得量 ↑↑</option><option value="down">EXP獲得量 ↓↓</option></select></div><div><label for="candyFrom">現在レベル</label><input id="candyFrom" type="number" min="1" max="70" value="25"></div><div><label for="candyTo">目標レベル</label><input id="candyTo" type="number" min="1" max="70" value="30"></div><div><label for="candyProgress">現在レベルで獲得済みのEXP</label><input id="candyProgress" type="number" min="0" value="0"><p id="candyProgressHelp" class="help"></p></div></div><p id="candyError" class="error" role="alert"></p>
@@ -1110,7 +1191,9 @@ const FieldExplorer=(()=>{
      const pokemon=list.filter(p=>p.index===r.index&&p.sleep===type);
      return `<td><div class="field-pokemon-grid">${pokemon.length?pokemon.map(p=>`<div class="field-pokemon-tile"><img src="${FIELD_DATA.images[p.name].icon}" alt="" width="48" height="48" loading="lazy"><span>${esc(p.name)}</span></div>`).join(''):'<span class="muted">—</span>'}</div></td>`;
     }).join('');
-    return `<tr><th scope="row"><span class="field-rank-badge">${r.rank}</span></th><td class="num">${fmt(r.energy)}</td><td class="num">${FieldExplorer.countAt(thresholds,r.energy,score)}匹</td>${cells}</tr>`;
+    const energy=fmt(r.energy);
+    const count=FieldExplorer.countAt(thresholds,r.energy,score);
+    return `<tr><th scope="row"><span class="field-rank-badge">${r.rank}</span><div class="field-mobile-meta"><span>必要 ${energy}</span><span>目安 ${count}匹</span></div></th><td class="num">${energy}</td><td class="num">${count}匹</td>${cells}</tr>`;
    }).join('')||'<tr><td colspan="6">条件に一致するポケモンがいません。</td></tr>';
   }catch(error){el('fieldError').textContent=error.message;el('fieldCountRows').replaceChildren();el('fieldPokemonRows').replaceChildren();el('fieldSpeciesCount').textContent='';}
  }
